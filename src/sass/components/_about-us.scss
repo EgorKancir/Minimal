@@ -1,0 +1,79 @@
+.about-us {
+    margin: 0;
+    padding: 36px 0;
+    &__content {
+        @include flex(center, center);
+        gap: 24px;
+    }
+    &__info-card {
+        padding: 36px 54px 34px 54px;
+        @include flex(center, start);
+        flex-direction: column;
+        gap: 30px;
+        background: var(--light-blue);
+    }
+    &__decor-title-group {
+        @extend %position-center;
+        gap: 20px;
+    }
+    &__decor-line {
+        width: 30px;
+        height: 1px;
+        flex-shrink: 0;
+        background-color: var(--blue-font);
+    }
+    &__decor-title {
+        color: var(--blue-font);
+        font-family: $main-fonts;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; 
+    }
+    &__title {
+        width: 622px;
+    }
+    &__paragraf {
+        width: 622px;
+        color: var(--blue-font);
+        font-family: $main-fonts;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+    }
+    &__image {
+        width: 536px;
+        height: 540px;
+        flex-shrink: 0;
+    }
+}
+.statistics {
+    @extend %position-center;
+    gap: 55px;
+    &__card {
+        @extend %position-center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__percent {
+        color: var(--blue-font);
+        text-align: center;
+        font-family: $main-fonts;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 75px; 
+        text-transform: uppercase;
+    }
+    &__name {
+        width: 170px;
+        color: var(--blue-font);
+        text-align: center;
+        font-family: $main-fonts;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+    }
+}
