@@ -3,11 +3,11 @@ body {
     margin: 0;
     background: var(--white);
 }
-h1, h2, h3, h4, h5, h6, p, ul {
+h1, h2, h3, h4, h5, h6, p, ul, menu, span {
     padding: 0;
     margin: 0;
 }
-ul {
+ul, menu {
     list-style: none;
 }
 a {
@@ -15,12 +15,24 @@ a {
     color: inherit;
 }
 .container {
-    width: 1320px;
+    width: 1350px;
     margin: 0 auto;
     padding: 0 15px;
 }
-@import'utils/mixin', 'utils/placholder', 'utils/variables';
-@import'components/header', 'components/banner', 'components/about-us';
+@import
+'utils/mixin', 
+'utils/placholder', 
+'utils/variables';
+@import
+'components/header', 
+'components/banner',
+'components/about-us', 
+'components/menu', 
+'components/our-products',
+'components/bestsellers',
+'components/clients',
+'components/newsletter',
+'components/footer';
 .main-title {
     color: var(--blue-font);
     font-family: $main-fonts;
@@ -29,4 +41,20 @@ a {
     font-weight: 400;
     line-height: 45px; 
     text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+    .container {
+        width: 734px;
+    }
+}
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 28px;
+        line-height: 42px; 
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        width: 373px;
+    }
 }

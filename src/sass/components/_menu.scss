@@ -1,0 +1,96 @@
+// Desktop
+.menu {
+    margin: 0;
+    padding: 50px 0;
+    &__content {
+        @extend %position-center;
+    }
+    &__list {
+        width: 1096px;
+        @extend %position-center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__item {
+        width: 100%;
+        @extend %position-center;
+    }
+    &__item--line {
+        width: 1096px;
+        height: 1px;
+        background: var(--blue-font);
+    }
+    &__link {
+        display: block;
+        width: 100%;
+        @include flex(space-between, center);
+        &:hover .menu__animation-group {
+            transform: translateX(0);
+            transition: all 0.4s ease-in-out;
+        }
+    }
+    &__animation-container {
+        overflow: hidden;
+    }
+    &__animation-group {
+        @extend %position-center;
+        gap: 30px;
+        transform: translateX(-80px);
+    }
+    &__line {
+        width: 50px;
+        height: 3px;
+        flex-shrink: 0;
+        background: var(--blue-font);
+    }
+    &__product-name {
+        color: var(--blue-font);
+        font-family: $main-fonts;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 45px; 
+        text-transform: uppercase;
+    }
+    &__price {
+        color: var(--blue-font);
+        text-align: right;
+        font-family: $main-fonts;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27px;
+    }
+}
+// Tablet
+@media (max-width: 1024px) {
+    .menu {
+        &__list {
+            width: 100%;
+        }
+        &__item--line {
+            width: 100%;
+        }
+    }
+}
+// Mobile
+@media (max-width: 768px) {
+    .menu {
+        padding: 64px 0 32px 0;
+        &__animation-group {
+            gap: 14px;
+            transform: translateX(-54px);
+        }
+        &__line {
+            width: 40px;
+        }
+        &__product-name {
+            font-size: 28px;
+            line-height: 42px;
+        }
+        &__price {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

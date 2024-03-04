@@ -1,0 +1,115 @@
+// Desktop
+.our-products {
+    margin: 0;
+    padding: 50px 0;
+    &__content {
+        @extend %position-center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__gallery {
+        @extend %position-center;
+        gap: 24px;
+    }
+    &__card {
+        @include flex(center, start);
+        flex-direction: column;
+        gap: 15px;
+        animation: party 8s linear infinite;
+        &:nth-child(1) {
+            animation: party 8s linear infinite;
+        }
+        &:nth-child(2) {
+            animation: party 8s linear 2s infinite;
+        }
+        &:nth-child(3) {
+            animation: party 8s linear 4s infinite;
+        }
+        &:nth-child(4) {
+            animation: party 8s linear 6s infinite;
+        }
+        &:nth-child(1) .our-products__image {
+            background-image: url("../src/image/raster/our-products_section/product1.png");
+        }
+        &:nth-child(2) .our-products__image {
+            background-image: url("../src/image/raster/our-products_section/product2.png");
+        }
+        &:nth-child(3) .our-products__image {
+            background-image: url("../src/image/raster/our-products_section/product3.png");
+        }
+        &:nth-child(4) .our-products__image {
+            background-image: url("../src/image/raster/our-products_section/product4.png");
+        }
+    }
+    &__image {
+        width: 312px;
+        height: 300px;
+        flex-shrink: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &__card-title {
+        color: var(--blue-font);
+        font-family: $main-fonts;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px; 
+    }
+}
+@keyframes party {
+    20% {
+        transform: scale(1.02);
+        transition: transform 0.3s linear;
+    }
+    30% {
+        transform: scale(1);
+        transition: transform 0.3s linear;
+    }
+}
+// Tablet
+@media (max-width: 1024px) {
+    .our-products {
+        &__gallery {
+            gap: 16px;
+        }
+        &__card {
+            gap: 15px;
+            &:nth-child(3) {
+                display: none;
+            }
+            &:nth-child(4) {
+                display: none;
+            }
+        }
+        &__image {
+            width: 344px;
+        }
+    }
+}
+// Mobile
+@media (max-width: 768px) {
+    .our-products {
+        padding: 32px 0;
+        &__content {
+            gap: 33px;
+        }
+        &__gallery {
+            gap: 0px;
+        }
+        &__card {
+            gap: 16px;
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+        &__image {
+            width: 343px;
+        }
+        &__card-title {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

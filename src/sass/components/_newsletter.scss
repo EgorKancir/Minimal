@@ -1,0 +1,168 @@
+// Desktop
+.newsletter {
+    margin: 0;
+    padding: 100px 0 86px 0;
+    &__content {
+        @extend %position-center;
+        gap: 100px;
+    }
+    &__main-group {
+        @include flex(center, start);
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__text-box {
+        @include flex(center, start);
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__paragraf {
+        width: 536px;
+        color: var(--blue-font);
+        font-family: $main-fonts;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px; 
+    }
+    &__image {
+        width: 460px;
+        height: 410px;
+        flex-shrink: 0;
+        background-image: url("../src/image/raster/newsletter_section/sofa.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+.subscribe-form {
+    @include flex(center, start);
+    flex-direction: column;
+    gap: 32px;
+    &__input-group {
+        @include flex(center, start);
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__input-container {
+        @extend %position-center;
+        gap: 8px;
+        color: var(--light-grey);
+        font-family: $main-fonts;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px; 
+    }
+    &__input {
+        display: flex;
+        width: 536px;
+        height: 50px;
+        padding: 11px 20px;
+        align-items: flex-start;
+        border: 1px solid var(--dark-grey);
+        color: var(--grey);
+        font-family: $main-fonts;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        outline: none;
+        &:focus-visible {
+            color: var(--blue-font);
+            border: 1px solid var(--blue-font);
+        }
+    }
+    &__checkbox {
+        width: 25px;
+        height: 25px;
+        flex-shrink: 0;
+        border: 1px solid var(--dark-grey);
+        border-radius: 0px;
+        accent-color: var(--blue-font); 
+        font-size: 13px;
+    }
+    &__button {
+        color: var(--white);
+        font-family: $main-fonts;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; 
+        padding: 13px 92px;
+        background: var(--blue-font);
+        border: none;
+        &:hover {
+            background: var(--blue-font--hover);
+            transform: scale(1.1);
+            transition: all 0.2s linear;
+        }
+    }
+}
+// Tablet
+@media (max-width: 1024px) {
+    .newsletter {
+        padding: 100px 0;
+        &__content {
+            @include flex(start, center);
+            flex-wrap: wrap;
+            gap: 64px;
+        }
+        &__image {
+            width: 704px;
+            height: 396px;
+            background-image: url("../src/image/raster/newsletter_section/sofa_tablet.png");
+        }
+    }
+    .subscribe-form {
+        gap: 30px;
+        &__input-group {
+            gap: 20px;
+        }
+    }
+}
+// Mobile
+@media (max-width: 768px) {
+    .newsletter {
+        padding: 64px 0;
+        &__content {
+            @include flex(center, center);
+            gap: 30px;
+        }
+        &__image {
+            width: 343px;
+            height: 300px;
+            flex-shrink: 0;
+            background-image: url("../src/image/raster/newsletter_section/sofa.png");
+        }
+        &__main-group {
+            @include flex(center, center);
+            gap: 30px;
+        }
+        &__text-box {
+            @include flex(center, center);
+            gap: 20px;
+        }
+        &__paragraf {
+            width: 343px;
+            font-size: 16px;
+            line-height: 24px; 
+        }
+    }
+    .subscribe-form {
+        &__input-container {
+            font-size: 16px;
+            line-height: 24px; 
+        }
+        &__input {
+            width: 343px;
+            height: 50px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &__button {
+            font-size: 16px;
+            padding: 13px 94px;
+        }
+    }        
+}
