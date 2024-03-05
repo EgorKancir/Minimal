@@ -16,17 +16,34 @@
         flex-direction: column;
         gap: 15px;
         animation: party 8s linear infinite;
+        &:hover {
+            transform: scale(0.9);
+            opacity: 0.8;
+            transition: all 0.3s linear;
+        }
         &:nth-child(1) {
             animation: party 8s linear infinite;
+            &:hover {
+                animation: none;
+            }
         }
         &:nth-child(2) {
             animation: party 8s linear 2s infinite;
+            &:hover {
+                animation: none;
+            }
         }
         &:nth-child(3) {
             animation: party 8s linear 4s infinite;
+            &:hover {
+                animation: none;
+            }
         }
         &:nth-child(4) {
             animation: party 8s linear 6s infinite;
+            &:hover {
+                animation: none;
+            }
         }
         &:nth-child(1) .our-products__image {
             background-image: url("../src/image/raster/our-products_section/product1.jpg");
@@ -64,8 +81,25 @@
         transition: transform 0.3s linear;
     }
     30% {
-        transform: scale(1);
+        transform: translate(0, -20px);
         transition: transform 0.3s linear;
+    }
+    35% {
+        transform: rotate(5deg);
+        transition: transform 0.15s linear;
+    }
+    37% {
+        transform: rotate(-5deg);
+        transition: transform 0.15s linear;
+    }
+    40% {
+        transform: translate(0, 0);
+        transition: transform 0.3s linear;
+    }
+}
+@keyframes not-party {
+    0% {
+        transform: scale(0.9);
     }
 }
 // Tablet

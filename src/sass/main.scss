@@ -42,19 +42,19 @@ a {
     line-height: 45px; 
     text-transform: uppercase;
 }
+// Tablet
 @media (max-width: 1024px) {
     .container {
         width: 734px;
     }
 }
+// Mobile
 @media (max-width: 768px) {
+    .container {
+        width: 373px;
+    }
     .main-title {
         font-size: 28px;
         line-height: 42px; 
-    }
-}
-@media (max-width: 480px) {
-    .container {
-        width: 373px;
     }
 }
