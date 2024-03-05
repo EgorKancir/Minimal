@@ -27,26 +27,45 @@
         }
         &:nth-child(2) {
             grid-area: 1 / 2 / 2 / 3;
+            & .bestsellers__image {
+                background-image: url("../src/image/raster/bestsellers_section/product2.jpg");
+            }
         }
         &:nth-child(3) {
             grid-area: 1 / 3 / 2 / 4;
+            & .bestsellers__image {
+                background-image: url("../src/image/raster/bestsellers_section/product3.jpg");
+            }
         }
         &:nth-child(4) {
             grid-area: 2 / 2 / 3 / 3;
+            & .bestsellers__image {
+                background-image: url("../src/image/raster/bestsellers_section/product4.jpg");
+            }
         }
         &:nth-child(5) {
             grid-area: 2 / 3 / 3 / 4;
+            & .bestsellers__image {
+                background-image: url("../src/image/raster/bestsellers_section/product5.jpg");
+            }
         }
     }
     &__main-image {
         width: 536px;
         height: 489px;
         flex-shrink: 0;
+        background-image: url("../src/image/raster/bestsellers_section/product1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
     &__image {
         width: 258px;
         height: 193px;
         flex-shrink: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
     &__text-group {
         @include flex(center, start);
