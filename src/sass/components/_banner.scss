@@ -126,7 +126,6 @@
         background-size: cover;
         background-position: center;
         &__content {
-            padding-top: 140px;
             @include flex(start, center);
         }
         &__title {
@@ -146,6 +145,7 @@
         }
     }
     .subscribe {
+        padding-top: 140px;
         gap: 28px;
         &__text {
             font-size: 16px;

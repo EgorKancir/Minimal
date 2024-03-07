@@ -39,6 +39,15 @@
 }
 // Tablet
 @media (max-width: 1024px) {
+    .header{
+        padding: 36px 0;
+        &._active {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 20;
+        }
+    }
     .menu-icon {
         display: block;
         width: 34px;
@@ -103,7 +112,7 @@
         z-index: 10;
         width: 100%;
         height: 100%;
-        padding: 150px 0;
+        padding: 245px;
         @include flex(center, start);
         background-color: white;
         transform: translate(-100%, 0px);

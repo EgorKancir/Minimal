@@ -42,10 +42,17 @@ a {
     line-height: 45px; 
     text-transform: uppercase;
 }
+@media (max-width: 1380px) {
+    .container {
+        width: 1340px;
+        padding: 0 10px;
+    }
+}
 // Tablet
 @media (max-width: 1024px) {
     .container {
         width: 734px;
+        padding: 0 15px;
     }
 }
 // Mobile
