@@ -29,7 +29,7 @@
         width: 460px;
         height: 410px;
         flex-shrink: 0;
-        background-image: url("../src/image/raster/newsletter_section/sofa.jpg");
+        background-image: url("../image/raster/newsletter_section/sofa.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -111,7 +111,7 @@
         &__image {
             width: 704px;
             height: 396px;
-            background-image: url("../src/image/raster/newsletter_section/sofa_tablet.jpg");
+            background-image: url("../image/raster/newsletter_section/sofa_tablet.jpg");
         }
     }
     .subscribe-form {
@@ -133,7 +133,7 @@
             width: 343px;
             height: 300px;
             flex-shrink: 0;
-            background-image: url("../src/image/raster/newsletter_section/sofa.jpg");
+            background-image: url("../image/raster/newsletter_section/sofa.jpg");
         }
         &__main-group {
             @include flex(center, center);
